@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Plugin
+metadata:
+  author: sheetung
+  name: LinkAnaly
+  repository: 'https://github.com/sheetung/LinkAnalyPlugin'
+  version: 0.1.1
+  description:
+    en_US: Parse links in chats
+    zh_Hans: 解析聊天中的链接
+  label:
+    en_US: LinkAnaly
+    zh_Hans: 链接解析
+  icon: assets/favicon.ico
+spec:
+  config: []
+  components:
+    EventListener:
+      fromDirs:
+      - path: components/event_listener/
+execution:
+  python:
+    path: main.py
+    attr: LinkAnaly
