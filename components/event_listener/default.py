@@ -107,7 +107,7 @@ class DefaultEventListener(EventListener):
                 f"💖 点赞：{self._format_count(stat_data.get('like', 0))}  ",
                 f"🪙 投币：{self._format_count(stat_data.get('coin', 0))}  ",
                 f"✨ 收藏：{self._format_count(stat_data.get('favorite', 0))}",
-                f"🌐 链接：https://www.bilibili.com/video/{video_id}"
+                f"🌐 链接：https://www.bilibili.com/video/av{video_id}"
             ])
 
             await event_context.reply(
