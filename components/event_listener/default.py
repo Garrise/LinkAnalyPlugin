@@ -103,7 +103,7 @@ class DefaultEventListener(EventListener):
             if description:
                 message_b.append(description.replace("\n", ""))
 
-            if not video_id.startswith("BV"):
+            if id_type == "av":
                 video_id = f"av{video_id}"
             message_b.extend([
                 f"💖 点赞：{self._format_count(stat_data.get('like', 0))}  ",
